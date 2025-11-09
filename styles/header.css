@@ -1,0 +1,51 @@
+header {
+  background-color: RGB(22, 90, 22);
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+h1 {
+  margin: 40px 30px 25px 30px;
+  text-align: center;
+  font-size: 30px;
+}
+
+h3 {
+  font-family: "Monoton", sans-serif;
+  font-size: 40px;
+  font-weight: lighter;
+  margin-block: 15px;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  margin: 5vh;
+}
+
+.description > img {
+  position: relative;
+  border-radius: 1rem;
+}
+
+.description > span {
+  z-index: 2;
+  position: absolute;
+  padding: 10px;
+  font-size: 1.3rem;
+  width: 350px;
+  padding-left: 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: transparent;
+  text-shadow: 4px 4px 9px rgba(66, 68, 90, 1);
+  background: linear-gradient(
+    90deg,
+    rgb(4, 38, 51) 0%,
+    rgb(13, 40, 39) 100%
+  );
+  background-clip: text;
+}

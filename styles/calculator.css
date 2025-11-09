@@ -1,0 +1,87 @@
+main {
+  background: RGB(28, 115, 28);
+  display: flex;
+  flex-direction: column;
+  margin: 70px 170px;
+  align-items: center;
+  border-radius: 14px;
+  overflow: hidden;
+  min-width: 15rem;
+}
+
+div.main {
+  min-height: 100vh;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 45px;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 80%;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+}
+
+li > span {
+  font-size: large;
+}
+
+.input {
+  height: 20px;
+  width: 170px;
+  margin-top: 5px;
+  outline: none;
+  border: 1px solid rgb(90, 0, 100);
+  border-radius: 6px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 23px;
+}
+
+button {
+  background: rgb(81, 81, 211);
+  border: none;
+  padding: 12px 15px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 15px;
+  font-weight: ;
+  border-radius: 5px;
+}
+
+button:hover {
+  scale: 1.1;
+  transition: 0.2s;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+button:active {
+  scale: 0.9;
+  transition: 0.2s;
+  font-weight: lighter;
+  opacity: 0.75;
+}

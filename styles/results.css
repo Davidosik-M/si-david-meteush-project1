@@ -1,0 +1,14 @@
+section.results {
+  padding-bottom: 45px;
+}
+
+.results table th,
+.results table td {
+    border: 1px solid rgb(24, 26, 27);
+    padding: 8px;
+    text-align: left;
+}
+
+results table th {
+    background-color: rgb(240, 240, 240);
+}
