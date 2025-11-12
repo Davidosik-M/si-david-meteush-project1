@@ -137,11 +137,10 @@
     </footer>
     <script>
       function calculateKBTW(Wiek, Wzrost, Waga, Plec, TrybZycia) {
-        let BMR;
-        if (Plec === "męzczyzna")
-          BMR = 10 * Waga + 6.25 * Wzrost - 5 * Wiek + 5;
-        else if (Plec === "kobieta")
-          BMR = 10 * Waga + 6.25 * Wzrost - 5 * Wiek - 161;
+        const BMR =
+          10 * Waga +
+          6.25 * Wzrost -
+          5 * (Plec === "męzczyzna" ? Wiek + 5 : Wiek - 161);
         const trybZycia = {
           sedentary: 1.2,
           light: 1.375,
@@ -149,17 +148,16 @@
           active: 1.725,
           very_active: 1.9,
         };
-        const factor = trybZycia[TrybZycia];
-        const TDEE = BMR * factor;
+        const TDEE = BMR * trybZycia[TrybZycia];
         const proteinGrams = 2 * Waga;
         const fatGrams = (TDEE * 0.25) / 9;
-        const carbGrams = (TDEE - (proteinGrams * 4 + fatGrams * 9)) / 4;
+
         return {
           BMR: Math.round(BMR),
           TDEE: Math.round(TDEE),
           protein: Math.round(proteinGrams),
           fat: Math.round(fatGrams),
-          carbs: Math.round(carbGrams),
+          carbs: Math.round((TDEE - (proteinGrams * 4 + fatGrams * 9)) / 4),
         };
       }
 
