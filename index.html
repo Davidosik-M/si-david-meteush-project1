@@ -142,7 +142,6 @@
           BMR = 10 * Waga + 6.25 * Wzrost - 5 * Wiek + 5;
         else if (Plec === "kobieta")
           BMR = 10 * Waga + 6.25 * Wzrost - 5 * Wiek - 161;
-        else throw new Error("Płeć musi być 'męzczyzna' lub 'kobieta'");
         const trybZycia = {
           sedentary: 1.2,
           light: 1.375,
@@ -151,7 +150,6 @@
           very_active: 1.9,
         };
         const factor = trybZycia[TrybZycia];
-        if (!factor) throw new Error("Nieprawidłowy poziom aktywności");
         const TDEE = BMR * factor;
         const proteinGrams = 2 * Waga;
         const fatGrams = (TDEE * 0.25) / 9;
